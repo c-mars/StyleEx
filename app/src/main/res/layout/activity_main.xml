@@ -1,28 +1,72 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView android:id="@+id/t"
-        android:text="@string/hello_world"
+    <LinearLayout
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/t"
+        android:layout_centerHorizontal="true"
+        android:clipToPadding="false"
+        android:padding="6dp">
+
+        <ToggleButton
+            android:textOn="a+"
+            android:textOff="a-"
+            android:id="@+id/a"
+            android:background="@drawable/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a"
+            android:layout_margin="6dp"
+            android:elevation="12dp"/>
+
+        <ToggleButton android:id="@+id/b"
+            android:text="b"
+            android:textOn="b+"
+            android:textOff="b-"
+            android:layout_margin="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="12dp"/>
+
+        <Switch android:id="@+id/c"
+            android:text="c"
+            android:layout_margin="6dp"
+            android:textOn="c+"
+            android:textOff="c-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="12dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/t"
         style="@android:style/TextAppearance.Holo.Medium.Inverse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:text="@string/hello_world" />
 
-    <Button android:id="@+id/u"
-        android:text="switch theme"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:background="@drawable/bg_t"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/t"
+    <Button
+        android:id="@+id/u"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp" />
+        android:layout_below="@+id/t"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_t"
+        android:padding="16dp"
+        android:text="switch theme"
+        android:textAppearance="?android:textAppearanceMedium" />
 
 </RelativeLayout>
