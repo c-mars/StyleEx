@@ -7,7 +7,7 @@
 
     <TextView android:id="@+id/t"
         android:text="@string/hello_world"
-        style="@android:style/TextAppearance.Holo.Medium"
+        style="@android:style/TextAppearance.Holo.Medium.Inverse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

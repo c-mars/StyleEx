@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.t) void t(){
 //        dynamic "manual" switching
         b=!b;
-        t.setTextAppearance(this, b ? android.R.style.TextAppearance_Holo_Large_Inverse : android.R.style.TextAppearance_Medium);
+        t.setTextAppearance(this, b ? android.R.style.TextAppearance_Holo_Large_Inverse : android.R.style.TextAppearance_Medium_Inverse);
+        if(b)t.setTextColor(getResources().getColor(android.R.color.black));
         t.setBackground(b ? ResourcesCompat.getDrawable(getResources(), R.drawable.bg, null) : null);
     }
 

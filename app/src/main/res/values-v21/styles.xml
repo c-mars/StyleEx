@@ -11,8 +11,11 @@
     <style name="AppTheme.Orange" parent="android:Theme.Material">
         <item name="android:colorPrimary">@android:color/holo_orange_dark</item>
         <item name="android:textColor">@android:color/holo_red_dark</item>
-        <item name="android:background">@android:color/holo_orange_light</item>
-        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionBarStyle">@style/ActionBarTheme</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@android:color/holo_orange_dark</item>
     </style>
 
 </resources>
